@@ -1,0 +1,16 @@
+{
+  "direction": [
+    [
+      385.0,
+      700.0
+    ],
+    [
+      363.0,
+      598.0
+    ]
+  ],
+  "center_line": [],
+  "drive_side": "left",
+  "line_type": "solid",
+  "params": {}
+}
