@@ -1,0 +1,12 @@
+time_s,frame,overtaker_id,vehicle,overtaken_id,side,status,violations,snapshot
+1.64,41,2,car,9,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_0_vehicle2.jpg
+1.76,44,20,car,28,RIGHT,LEGAL,,
+2.12,53,9,car,21,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_1_vehicle9.jpg
+2.92,73,39,car,32,RIGHT,LEGAL,,
+3.68,92,28,car,20,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_2_vehicle28.jpg
+5.16,129,61,car,73,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_3_vehicle61.jpg
+6.52,163,20,car,12,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_4_vehicle20.jpg
+10.92,273,12,car,20,RIGHT,LEGAL,,
+12.28,307,140,car,157,RIGHT,LEGAL,,
+21.0,525,295,car,140,LEFT,VIOLATION,WRONG_SIDE_OVERTAKE,output\evidence\event_5_vehicle295.jpg
+21.72,543,140,car,295,RIGHT,LEGAL,,
