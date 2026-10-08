@@ -11,7 +11,7 @@ from collections import defaultdict
 
 import cv2
 
-from rules import detect_events, load_config
+from rules import RULES, detect_events, load_config
 
 COCO_VEHICLES = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
 
@@ -103,12 +103,15 @@ def process(video, config_path, out_dir="output", model_name="yolov8n.pt"):
     with open(csv_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["time_s", "frame", "overtaker_id", "vehicle", "overtaken_id",
-                    "side", "status", "violations", "snapshot"])
+                    "side", "status", "violations", "rule_description", "legal_ref", "snapshot"])
         for e in events:
             w.writerow([round(e["frame"] / fps, 2), e["frame"], e["overtaker"],
                         e["overtaker_class"], e["overtaken"], e["side"],
                         "VIOLATION" if e["violations"] else "LEGAL",
-                        "|".join(e["violations"]), e.get("snapshot", "")])
+                        "|".join(e["violations"]),
+                        " | ".join(RULES[v]["description"] for v in e["violations"]),
+                        " | ".join(RULES[v]["legal_ref"] for v in e["violations"]),
+                        e.get("snapshot", "")])
     print("Done. See the", out_dir, "folder.")
     return events, out_video, csv_path
 

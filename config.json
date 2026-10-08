@@ -1,16 +1,18 @@
 {
   "direction": [
     [
-      385.0,
-      700.0
+      1004.0625,
+      1282.5
     ],
     [
-      363.0,
-      598.0
+      1029.375,
+      150.1875
     ]
   ],
   "center_line": [],
+  "zones": [],
   "drive_side": "left",
   "line_type": "solid",
+  "lane_traffic": true,
   "params": {}
 }
